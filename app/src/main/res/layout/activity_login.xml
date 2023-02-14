@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:background="#EBFDFF"
+    android:id="@+id/container"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:contentDescription="@string/app_name"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <TextView
+        android:id="@+id/lg_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_there_welcome_back"
+        android:textSize="40sp"
+        android:textColor="#003300"
+        />
+
+    <TextView
+        android:id="@+id/sl_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_to_continue"
+        android:textSize="18sp"
+        android:textColor="#003300"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:hint="@string/username"
+            android:textColor="#003300"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="@string/password"
+            android:textColor="#003300"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:textColor="#003300"
+        android:text="@string/forget_password"
+        android:layout_gravity="right"
+        android:elevation="0dp"
+        android:layout_margin="5dp"
+        tools:ignore="RtlHardcoded" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        android:background="#082C0A"
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="@string/new_user_sign_up"
+        android:layout_gravity="right"
+        android:elevation="0dp"
+        android:layout_margin="5dp"
+        android:textColor="#003300"
+        tools:ignore="RtlHardcoded" />
+
+
+</LinearLayout>

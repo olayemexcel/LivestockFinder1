@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310578685115",
+    "project_id": "livestockfinder1-8430d",
+    "storage_bucket": "livestockfinder1-8430d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310578685115:android:950ad57809e5321ff8b59e",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.b1210259.livestockfinder1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310578685115-5j4320001iruov10bp1fmqiclal52if2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoolvPygAcVsvEO62EhKonmA4jnWzFVe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310578685115-5j4320001iruov10bp1fmqiclal52if2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
