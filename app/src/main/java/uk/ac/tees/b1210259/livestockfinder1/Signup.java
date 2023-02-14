@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
@@ -61,6 +62,7 @@ public class Signup extends AppCompatActivity {
                 UserSignupClass helperClass = new UserSignupClass();
 
                 reference.child(phoneNo).setValue(helperClass);
+                Toast.makeText(Signup.this, "Welcome", Toast.LENGTH_SHORT).show();
             }
         }); //Signup button method End
 
