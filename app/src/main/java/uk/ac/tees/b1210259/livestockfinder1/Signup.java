@@ -59,7 +59,7 @@ public class Signup extends AppCompatActivity {
                 String phoneNo = regPhoneNo.getEditText().getText().toString();
                 String password = regPassword.getEditText().getText().toString();
 
-                UserSignupClass helperClass = new UserSignupClass();
+                UserSignupClass helperClass = new UserSignupClass(name, username, email, phoneNo, password);
 
                 reference.child(phoneNo).setValue(helperClass);
                 Toast.makeText(Signup.this, "Welcome", Toast.LENGTH_SHORT).show();
