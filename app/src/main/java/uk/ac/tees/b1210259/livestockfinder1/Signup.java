@@ -45,6 +45,9 @@ public class Signup extends AppCompatActivity {
         regBtn = findViewById(R.id.signup);
         regLoginBtn = findViewById(R.id.button4);
 
+
+
+
         //Click button to save data in Firebase
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,19 +55,18 @@ public class Signup extends AppCompatActivity {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
 
-                //Get all the values
+                //Get all the values in String
                 String name = regName.getEditText().getText().toString();
                 String username = regUsername.getEditText().getText().toString();
                 String email = regEmail.getEditText().getText().toString();
                 String phoneNo = regPhoneNo.getEditText().getText().toString();
                 String password = regPassword.getEditText().getText().toString();
-
                 UserSignupClass helperClass = new UserSignupClass(name, username, email, phoneNo, password);
-
                 reference.child(phoneNo).setValue(helperClass);
-                Toast.makeText(Signup.this, "Welcome", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signup.this, "Saving data..", Toast.LENGTH_SHORT).show();
             }
         }); //Signup button method End
+
 
 
 
