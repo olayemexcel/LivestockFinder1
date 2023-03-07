@@ -39,10 +39,21 @@
     <string name="phone_number">Phone Number</string>
     <string name="_1_123_456789">+1-123-456789</string>
     <string name="password2">Password</string>
-    <string name="update">Update</string>
+    <string name="update">Explore Here</string>
     <string name="profile_page">Profile page</string>
     <string name="full_name2">Full Name</string>
     <string name="olayemexcel_gmail_com">Olayemexcel@gmail.com</string>
     <string name="pass">**********</string>
     <string name="olayemexcel_app1">Olayemexcel App</string>
+    <string name="verify_phone_no">VERIFY PHONE NO</string>
+    <string name="enter_verification_code_if_not_automatically_authenticated">Enter verification code if not automatically authenticated !</string>
+    <string name="verify">VERIFY</string>
+    <string name="special_breeds">Special Breeds</string>
+    <string name="around_the_world">Around the World</string>
+    <string name="track_now">Track Now</string>
+    <string name="categories">Categories</string>
+    <string name="popular">Popular</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="find_your_livestock">Find Your Livestock</string>
 </resources>

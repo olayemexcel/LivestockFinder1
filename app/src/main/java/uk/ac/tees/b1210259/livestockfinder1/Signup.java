@@ -46,26 +46,6 @@ public class Signup extends AppCompatActivity {
         regLoginBtn = findViewById(R.id.button4);
 
 
-        //Click button to save data in Firebase
-       /* regBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("users");
-
-                //Get all the values in String
-                String name = regName.getEditText().getText().toString();
-                String username = regUsername.getEditText().getText().toString();
-                String email = regEmail.getEditText().getText().toString();
-                String phoneNo = regPhoneNo.getEditText().getText().toString();
-                String password = regPassword.getEditText().getText().toString();
-                UserSignupClass helperClass = new UserSignupClass(name, username, email, phoneNo, password);
-                reference.child(phoneNo).setValue(helperClass);
-                Toast.makeText(Signup.this, "Saving data..", Toast.LENGTH_SHORT).show();
-            }
-        }); *///Signup button method End
-
-
         //onclick event to another page
         btn2 = findViewById(R.id.button4);
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -175,9 +155,17 @@ public class Signup extends AppCompatActivity {
         String email = regEmail.getEditText().getText().toString();
         String phoneNo = regPhoneNo.getEditText().getText().toString();
         String password = regPassword.getEditText().getText().toString();
+
+
+        //Intent intent = new Intent(getApplicationContext(),verify_phone_no.class);
+        //intent.putExtra("phoneNo",phoneNo);
+        //startActivity(intent);
+
+        //Storing data in firebase
         UserSignupClass helperClass = new UserSignupClass(name, username, email, phoneNo, password);
         reference.child(username).setValue(helperClass);
-        Toast.makeText(Signup.this, "Data Save Successfully!", Toast.LENGTH_SHORT).show();
+
+       Toast.makeText(Signup.this, "Account created Successfully!", Toast.LENGTH_SHORT).show();
 
     }
 

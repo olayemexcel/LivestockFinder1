@@ -26,7 +26,7 @@
                 android:src="@drawable/profile_img" />
 
             <TextView
-                android:id="@+id/full_name"
+                android:id="@+id/prof_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -38,9 +38,10 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/prof_des"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/full_name"
+                android:layout_below="@id/prof_page"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/profile_img"
                 android:includeFontPadding="false"
@@ -157,6 +158,7 @@
             android:padding="20dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prof_full_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -168,10 +170,11 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/user_small_icon1"
                     android:drawablePadding="10dp"
-                    android:text="@string/olayemexcel_app1" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prof_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -182,10 +185,11 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/mail_icon1"
                     android:drawablePadding="10dp"
-                    android:text="@string/olayemexcel_gmail_com" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prof_phoneNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -196,10 +200,11 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/phone_icon"
                     android:drawablePadding="10dp"
-                    android:text="@string/_1_123_456789" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prof_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -210,14 +215,17 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/password_icon"
                     android:drawablePadding="10dp"
-                    android:text="@string/pass" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/prof_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#082C0A"
                 android:text="@string/update"
+                android:textSize="30sp"
+                android:textStyle="italic"
                 android:textColor="@color/white">
 
             </androidx.appcompat.widget.AppCompatButton>
