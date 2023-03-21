@@ -27,7 +27,7 @@ public class UserProfile extends AppCompatActivity {
         fullName = findViewById(R.id.prof_full_name);
         email = findViewById(R.id.prof_email);
         phoneNo = findViewById(R.id.prof_phoneNo);
-        password = findViewById(R.id.prof_password);
+       // password = findViewById(R.id.prof_password);
         fullNameLabel = findViewById(R.id.prof_page);
         usernameLabel = findViewById(R.id.prof_des);
 
@@ -55,14 +55,14 @@ public class UserProfile extends AppCompatActivity {
         String user_name = intent.getStringExtra("name");
         String user_email = intent.getStringExtra("email");
         String user_phone = intent.getStringExtra("phoneNo");
-        String user_password = intent.getStringExtra("password");
+        //String user_password = intent.getStringExtra("password");
 
         fullNameLabel.setText(user_name);
         usernameLabel.setText(user_username);
         fullName.getEditText().setText(user_name);
         email.getEditText().setText(user_email);
         phoneNo.getEditText().setText(user_phone);
-        password.getEditText().setText(user_password);
+        //password.getEditText().setText(user_password);
     }
 }
 //UserProfile > showAllUserData()

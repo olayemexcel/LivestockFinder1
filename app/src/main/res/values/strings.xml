@@ -38,7 +38,7 @@
     <string name="email2">Email</string>
     <string name="phone_number">Phone Number</string>
     <string name="_1_123_456789">+1-123-456789</string>
-    <string name="password2">Password</string>
+    <string name="Logout">Logout</string>
     <string name="update">Explore Here</string>
     <string name="profile_page">Profile page</string>
     <string name="full_name2">Full Name</string>
@@ -56,4 +56,5 @@
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="find_your_livestock">Find Your Livestock</string>
+    <string name="logout">Logout</string>
 </resources>
