@@ -5,12 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import java.util.ArrayList;
 
 import uk.ac.tees.b1210259.livestockfinder1.Adaptor.CategoryAdaptor;
 
 public class Home extends AppCompatActivity {
+
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewCategorylist;
 
@@ -24,6 +26,8 @@ public class Home extends AppCompatActivity {
     }
 
     private void recyclerViewcategory() {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         LinearLayoutManager LinearLayoutManager=new LinearLayoutManager(this, androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL, false);
         recyclerViewCategorylist=findViewById(R.id.recyclerView);
         recyclerViewCategorylist.setLayoutManager(LinearLayoutManager);
@@ -32,8 +36,8 @@ public class Home extends AppCompatActivity {
         category.add(new CategoryDomain( "Cattle", "cat_1"));
         category.add(new CategoryDomain( "Goat", "cat_2"));
         category.add(new CategoryDomain( "Sheep", "cat_3"));
-        category.add(new CategoryDomain( "Cat", "cat_4"));
-        category.add(new CategoryDomain( "Dog", "cat_5"));
+        category.add(new CategoryDomain( "Dog", "cat_4"));
+        category.add(new CategoryDomain( "Cat", "cat_5"));
 
         adapter=new CategoryAdaptor(category);
         recyclerViewCategorylist.setAdapter(adapter);
