@@ -10,11 +10,12 @@ import android.view.WindowManager;
 import java.util.ArrayList;
 
 import uk.ac.tees.b1210259.livestockfinder1.Adaptor.CategoryAdaptor;
+import uk.ac.tees.b1210259.livestockfinder1.Adaptor.PopularAdaptor;
 
 public class Home extends AppCompatActivity {
 
-    private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerViewCategorylist;
+    private RecyclerView.Adapter adapter,adapter2;
+    private RecyclerView recyclerViewCategorylist,recyclerViewPopularList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class Home extends AppCompatActivity {
 
 
         recyclerViewcategory();
+        recyclerViewPopular();
     }
 
     private void recyclerViewcategory() {
@@ -42,6 +44,19 @@ public class Home extends AppCompatActivity {
         adapter=new CategoryAdaptor(category);
         recyclerViewCategorylist.setAdapter(adapter);
 
+    }
+    private void recyclerViewPopular(){
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewPopularList=findViewById(R.id.recyclerView2);
+        recyclerViewPopularList.setLayoutManager(linearLayoutManager);
+
+        ArrayList<AnimalDomain> animalList=new ArrayList<>();
+        animalList.add(new AnimalDomain("Brown cattle","cattle1","brown cattle commonly found in America",500.50));
+        animalList.add(new AnimalDomain("Wolf dog","dog1","wolf dog has wolf gene and good for security",450.30));
+        animalList.add(new AnimalDomain("Boro cattle","cattle2","white colour cattle commonly found in Africa",300.80));
+
+        adapter2=new PopularAdaptor(animalList);
+        recyclerViewPopularList.setAdapter(adapter2);
     }
 
 }
