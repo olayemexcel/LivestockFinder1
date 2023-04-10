@@ -203,20 +203,15 @@
                      />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/prof_password"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/logoutbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="@string/Logout">
+                android:text="@string/Logout"
+                android:textSize="20sp"
+                android:background="#00000000"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/password_icon"
-                    android:drawablePadding="10dp"
-                     />
-            </com.google.android.material.textfield.TextInputLayout>
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/prof_button"

@@ -29,7 +29,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".verify_phone_no"
+            android:name=".ForgetPassword"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

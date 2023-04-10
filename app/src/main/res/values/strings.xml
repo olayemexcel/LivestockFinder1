@@ -19,7 +19,7 @@
     <string name="welcome">Welcome</string>
     <string name="signup_to_start_your_new_journey">SignUp to start your new Journey</string>
     <string name="full_name">Full Name</string>
-    <string name="signup_to_start_your_new_journey1">SignUp to start your new Journey</string>
+    <string name="signup_to_start_your_new_journey1">Click above to upload image</string>
     <string name="user_name">Username</string>
     <string name="user_name1">Username</string>
     <string name="username1">Username</string>
@@ -45,9 +45,9 @@
     <string name="olayemexcel_gmail_com">Olayemexcel@gmail.com</string>
     <string name="pass">**********</string>
     <string name="olayemexcel_app1">Olayemexcel App</string>
-    <string name="verify_phone_no">VERIFY PHONE NO</string>
-    <string name="enter_verification_code_if_not_automatically_authenticated">Enter verification code if not automatically authenticated !</string>
-    <string name="verify">VERIFY</string>
+    <string name="verify_phone_no">FORGET PASSWORD</string>
+    <string name="enter_verification_code_if_not_automatically_authenticated">Enter Your Valid Email to reset your password!</string>
+    <string name="verify">RESET</string>
     <string name="special_breeds">Special Breeds</string>
     <string name="around_the_world">Around the World</string>
     <string name="track_now">Track Now</string>
@@ -57,4 +57,5 @@
     <string name="profile">Profile</string>
     <string name="find_your_livestock">Find Your Livestock</string>
     <string name="logout">Logout</string>
+    <string name="profile_page_home">Profile Page</string>
 </resources>

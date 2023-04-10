@@ -10,28 +10,47 @@
     android:id="@+id/container1"
     android:padding="20dp">
 
+
     <ImageView
         android:id="@+id/imageView4"
+        android:layout_width="106dp"
+        android:layout_height="90dp"
         android:contentDescription="@string/app_name"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
         app:srcCompat="@drawable/logo1" />
+
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome1"
-        android:textSize="40sp"
-        android:textColor="#003300"
+        android:layout_height="30dp"
+        android:layout_marginTop="-10dp"
         android:fontFamily="serif"
-        android:layout_marginTop="-10dp"/>
+        android:text="@string/welcome1"
+        android:textColor="#003300"
+        android:textSize="25sp" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+
+        android:text="@string/signup_to_start_your_new_journey"
+        android:textSize="18sp"
+        android:textColor="#003300"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewCircle"
+        android:layout_width="91dp"
+        android:layout_height="87dp"
+        android:background="@drawable/profile_img" />
+
+
+    <TextView
+        android:id="@+id/uploadtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signup_to_start_your_new_journey1"
-        android:textSize="18sp"
-        android:textColor="#003300"/>
+        android:textColor="#003300"
+        android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,7 +82,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/username1"
             app:counterEnabled="true"
-            app:counterMaxLength="15"
+            app:counterMaxLength="50"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -135,7 +154,7 @@
         android:background="#082C0A"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/logoutbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/already_have_an_account_login"
