@@ -1,6 +1,8 @@
 package uk.ac.tees.b1210259.livestockfinder1;
 
-public class AnimalDomain {
+import java.io.Serializable;
+
+public class AnimalDomain implements Serializable {
 
     private String title;
     private String pic;

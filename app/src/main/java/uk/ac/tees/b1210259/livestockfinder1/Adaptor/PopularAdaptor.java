@@ -1,5 +1,7 @@
 package uk.ac.tees.b1210259.livestockfinder1.Adaptor;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 
 import uk.ac.tees.b1210259.livestockfinder1.AnimalDomain;
 import uk.ac.tees.b1210259.livestockfinder1.R;
+import uk.ac.tees.b1210259.livestockfinder1.ShowDetail;
 
 public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHolder> {
     ArrayList<AnimalDomain> popularAnimal;
@@ -30,7 +33,7 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(popularAnimal.get(position).getTitle());
         holder.fee.setText(String.valueOf(popularAnimal.get(position).getFee()));
 
@@ -38,6 +41,15 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.pic);
+
+        holder.trackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(holder.itemView.getContext(), ShowDetail.class);
+                intent.putExtra("object", popularAnimal.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
