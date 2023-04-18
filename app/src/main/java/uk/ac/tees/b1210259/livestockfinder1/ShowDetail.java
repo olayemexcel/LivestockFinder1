@@ -1,6 +1,8 @@
 package uk.ac.tees.b1210259.livestockfinder1;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,6 +26,10 @@ public class ShowDetail extends AppCompatActivity {
 
         initView();
         getBundle();
+
+
+
+
     }
 
     private  void getBundle(){
@@ -68,5 +74,16 @@ public class ShowDetail extends AppCompatActivity {
         plusBtn = findViewById(R.id.plusBtn);
         minusBtn = findViewById(R.id.minusBtn);
         picAnimal = findViewById(R.id.picAnimal);
+
+
+        //Button home click event
+        addToCartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Home.class);
+                startActivity(intent);
+
+            }
+        }); //Button home ends
     }
 }

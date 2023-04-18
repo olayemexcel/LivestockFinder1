@@ -93,7 +93,7 @@
       android:id="@+id/favoriteBtn"
       android:layout_width="0dp"
       android:layout_height="50dp"
-      android:text="Add to Favorite"
+      android:text="Back Home"
       android:textStyle="bold"
       android:elevation="3dp"
       android:layout_margin="16dp"

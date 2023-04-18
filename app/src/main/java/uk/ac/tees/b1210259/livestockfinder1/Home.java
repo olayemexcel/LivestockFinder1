@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -13,6 +16,8 @@ import uk.ac.tees.b1210259.livestockfinder1.Adaptor.CategoryAdaptor;
 import uk.ac.tees.b1210259.livestockfinder1.Adaptor.PopularAdaptor;
 
 public class Home extends AppCompatActivity {
+
+    Button btnprofile;
 
     private RecyclerView.Adapter adapter,adapter2;
     private RecyclerView recyclerViewCategorylist,recyclerViewPopularList;
@@ -25,6 +30,20 @@ public class Home extends AppCompatActivity {
 
         recyclerViewcategory();
         recyclerViewPopular();
+
+        //Hook
+        btnprofile = findViewById(R.id.profilebtn);
+
+
+        //Button profile click event
+        btnprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+                startActivity(intent);
+
+            }
+        }); //Button profile ends
     }
 
     private void recyclerViewcategory() {
@@ -51,9 +70,9 @@ public class Home extends AppCompatActivity {
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         ArrayList<AnimalDomain> animalList=new ArrayList<>();
-        animalList.add(new AnimalDomain("Brown cattle","cattle1","brown cattle commonly found in America",500.50));
-        animalList.add(new AnimalDomain("Wolf dog","dog1","wolf dog has wolf gene and good for security",450.30));
-        animalList.add(new AnimalDomain("Boro cattle","cattle2","white colour cattle commonly found in Africa",300.80));
+        animalList.add(new AnimalDomain("Brown cattle","cattle1","Brown cattle commonly found in America - Contact: Livestockinfo@gmail.com or Call 07459779004",500.50));
+        animalList.add(new AnimalDomain("Wolf dog","dog1","Wolf dog has wolf gene and good for security- Contact: Livestockinfo@gmail.com or Call 07459779004",450.30));
+        animalList.add(new AnimalDomain("Boro cattle","cattle2","White colour cattle commonly found in Africa- Contact: Livestockinfo@gmail.com or Call 07459779004",300.80));
 
         adapter2=new PopularAdaptor(animalList);
         recyclerViewPopularList.setAdapter(adapter2);

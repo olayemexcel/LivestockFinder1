@@ -26,7 +26,7 @@ import java.util.List;
 
 public class UserProfile extends AppCompatActivity {
 
-    Button btnExplore;
+    Button btnExplore, btnlogout;
     TextView fullNameLabel, usernameLabel;
     TextInputLayout fullName,email,phoneNo,password;
 
@@ -57,6 +57,7 @@ public class UserProfile extends AppCompatActivity {
         usernameLabel = findViewById(R.id.prof_des);
 
         btnExplore = findViewById(R.id.prof_button);
+        btnlogout = findViewById(R.id.logoutbtn);
 
         //Show All Data
         showAllUserData();
@@ -71,6 +72,16 @@ public class UserProfile extends AppCompatActivity {
 
             }
         }); //Button explore ends
+
+        //Button logout click event
+        btnlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+
+            }
+        }); //Button logout ends
 
 
         //initialize places
