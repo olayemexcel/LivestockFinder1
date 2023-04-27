@@ -3,6 +3,7 @@ package uk.ac.tees.b1210259.livestockfinder1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
 
-    Button btnSignUp, btnLogin, buttonForget;
+    Button btnSignUp, btnLogin, btnForget, btnPrivacy;
     ImageView image;
     TextView logoText, sloganText;
     TextInputLayout username, password;
@@ -38,6 +39,7 @@ public class Login extends AppCompatActivity {
     FirebaseAuth auth;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,8 @@ public class Login extends AppCompatActivity {
 
         btnLogin = findViewById(R.id.button2);
         btnSignUp = findViewById(R.id.button3);
+        btnForget = findViewById(R.id.button1);
+        btnPrivacy = findViewById(R.id.privacybt);
 
         //Firebase auth method
         auth = FirebaseAuth.getInstance();
@@ -64,6 +68,28 @@ public class Login extends AppCompatActivity {
 
             }
         });
+
+        //Button forgetPassword click event
+        btnForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ForgetPassword.class);
+                startActivity(intent);
+
+            }
+        }); //Button forgetPassword ends
+
+
+        //Button privacy click event
+        btnPrivacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Privacy1.class);
+                startActivity(intent);
+
+            }
+        }); //Button privacy ends
+
 
     }
 

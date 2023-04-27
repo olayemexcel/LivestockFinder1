@@ -58,4 +58,13 @@
     <string name="find_your_livestock">Find Your Livestock</string>
     <string name="logout">Logout</string>
     <string name="profile_page_home">Profile Page</string>
+    <string name="loginForget">Login</string>
+    <string name="privacy_policy"><![CDATA[Read Privacy Policy & Terms of Use]]></string>
+    <string name="contin">Continue</string>
+    <string name="privacyPol">Privacy Policy</string>
+    <string name="privacyPo">Privacy Policy</string>
+    <string name="privacytxt">All personal data and contact details will be treated with data privacy protection and compliance guidelines, and thereby collected for the purpose of this app only. All data for the user that no longer exist will be removed from our database.</string>
+    <string name="terms">Terms of Use</string>
+    <string name="termsof">The Services/use (all services/use available on this app: LivestockFinder) are guided by strict rule of not allowing any form of illegal operations, communication or transaction regarding livestock/pets on this platform, and no animals/pets that are not inline with the standard and quality of view for people, or health status should be posted, or acquired on this platform. Also any form of underage services are not allowed.</string>
+    <string name="copy"><![CDATA[\u00A9 2023 All rights reserved]]></string>
 </resources>
